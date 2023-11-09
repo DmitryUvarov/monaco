@@ -286,3 +286,64 @@
 }
 
 //========================================================================================================================================================
+
+.advantages {
+  @include adaptiveValue("padding-top", 85, 35);
+  @include adaptiveValue("padding-bottom", 125, 35);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 50, 35);
+  }
+
+  &__items {
+    display: grid;
+    gap: toRem(20);
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(auto-fill, minmax(toRem(300), 1fr));
+    }
+  }
+
+  &__item {
+  }
+}
+
+.item-advantages {
+  border-radius: toRem(15);
+  background: #fff;
+
+  padding: toRem(30) toRem(30) toRem(44) toRem(34);
+
+  @media (max-width: $mobile) {
+    padding: toRem(25) toRem(20);
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(25);
+  }
+
+  &__ico {
+    flex: 0 0 toRem(70);
+
+    @media (max-width: $mobile) {
+      flex: 0 0 toRem(55);
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    color: #333;
+    font-size: 22px;
+  }
+
+  &__text {
+    margin-top: toRem(10);
+    padding-left: toRem(80);
+  }
+}
+
+//========================================================================================================================================================
