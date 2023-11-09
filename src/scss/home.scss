@@ -347,3 +347,72 @@
 }
 
 //========================================================================================================================================================
+
+.photo {
+  @include adaptiveValue("padding-top", 85, 35);
+  @include adaptiveValue("padding-bottom", 125, 35);
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: -2;
+  }
+  &__container {
+  }
+
+  &__title {
+  }
+
+  &__subtitle {
+    text-align: center;
+    @include adaptiveValue("font-size", 19, 18);
+    line-height: 115%; /* 115.789% */
+    margin-bottom: toRem(5);
+
+    @include adaptiveValue("margin-bottom", 47, 35);
+  }
+
+  &__items {
+    display: grid;
+    @include adaptiveValue("gap", 20, 15);
+    grid-template-columns: repeat(auto-fill, minmax(toRem(300), 1fr));
+  }
+
+  &__item-ibg {
+    padding-bottom: percent(264, 380);
+    border-radius: toRem(20);
+    overflow: hidden;
+
+    img {
+      transition: all 0.3s ease 0s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  &__link {
+    @include adaptiveValue("margin-top", 60, 35);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: max-content;
+
+    @media (min-width: $mobile) {
+      min-height: toRem(71);
+      min-width: toRem(317);
+    }
+  }
+}
+
+//========================================================================================================================================================

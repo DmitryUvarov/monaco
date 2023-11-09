@@ -3,6 +3,7 @@
 
 .button {
   display: inline-flex;
+  column-gap: toRem(22);
   justify-content: center;
   align-items: center;
 
@@ -61,6 +62,15 @@
           box-shadow: 0 0 0 toRem(5) rgba(52, 148, 191, 0.25);
         }
       }
+    }
+  }
+
+  &_arrow {
+    flex-direction: row-reverse;
+    &::before {
+      content: "\e900";
+      @extend %ic;
+      @include adaptiveValue("font-size", 26, 22);
     }
   }
 
