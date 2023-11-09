@@ -1,6 +1,7 @@
 //====================================================================================================
 
 .hero {
+  position: relative;
   @include adaptiveValue("padding-top", 160, 130, 1, 767, 375);
   @include adaptiveValue("padding-bottom", 85, 40);
   @media (min-width: $pc) {
@@ -132,6 +133,9 @@
   &__item-text {
     color: #333;
     line-height: 100%;
+  }
+
+  &__decor {
   }
 }
 
