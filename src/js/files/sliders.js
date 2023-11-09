@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay,
@@ -28,8 +28,8 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector('.1234342')) {
-			new Swiper('.12324234', {
+	if (document.querySelector('.df1234342')) {
+			new Swiper('.df12324234', {
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
@@ -104,6 +104,34 @@ function initSliders() {
 			}
 		});
 	}
+
+
+	if (document.querySelector('.hero__slider')) {
+		new Swiper('.hero__slider', {
+		modules: [Autoplay, Pagination, EffectFade],
+		observer: true,
+		observeParents: true,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		speed: 800,
+
+		lazyPreloaderClass: 'preloader',
+
+		effect: 'fade',
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},
+
+
+		pagination: {
+			el: '.hero__slider .hero__pagination',
+			clickable: true,
+		},
+
+	});
+}
 }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {

@@ -2,13 +2,69 @@
 // Сніппет (HTML): btn
 
 .button {
-	display: inline-flex;
-	padding: 0px 0px;
-	@media (any-hover: hover) {
-		&:hover {
-		}
-	}
-	&--fw {
-		width: 100%;
-	}
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: toRem(45);
+  background-color: #f2b154;
+
+  padding: toRem(5) toRem(10);
+  min-height: toRem(58);
+  min-width: toRem(258);
+
+  color: #fff;
+  font-family: Jost;
+  @include adaptiveValue("font-size", 20, 18);
+  font-weight: 400;
+  line-height: 20px; /* 100% */
+
+  transition: all 0.3s ease 0s;
+
+  @media (max-width: $mobile) {
+    min-height: toRem(50);
+  }
+
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + toRem(10));
+    height: calc(100% + toRem(10));
+    top: toRem(-5);
+    left: toRem(-5);
+    border-radius: toRem(45);
+    background-color: rgba(242, 177, 84, 0.3);
+    z-index: -1;
+    transition: box-shadow 0.3s ease 0s;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: rgba(242, 176, 84, 0.8);
+      &::after {
+        box-shadow: 0 0 0 toRem(5) rgba(242, 177, 84, 0.25);
+      }
+    }
+  }
+
+  &_blue {
+    background-color: #3494bf;
+    &::after {
+      background-color: rgba(52, 148, 191, 0.68);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(52, 148, 191, 0.8);
+        &::after {
+          box-shadow: 0 0 0 toRem(5) rgba(52, 148, 191, 0.25);
+        }
+      }
+    }
+  }
+
+  &--fw {
+    width: 100%;
+  }
 }

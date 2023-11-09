@@ -1,3 +1,138 @@
 //====================================================================================================
 
+.hero {
+  @include adaptiveValue("padding-top", 160, 130, 1, 767, 375);
+  @include adaptiveValue("padding-bottom", 85, 40);
+  @media (min-width: $pc) {
+    padding-top: toRem(137);
+  }
+  @media (min-width: $mobile) {
+    padding-top: toRem(165);
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: $tablet) {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+    @media (max-width: $tablet) {
+      margin-bottom: toRem(30);
+    }
+  }
+
+  &__title {
+    max-width: toRem(680);
+    @include adaptiveValue("font-size", 55, 30);
+    @include adaptiveValue("margin-bottom", 55, 40);
+    line-height: 100%;
+
+    @media (min-width: $tablet) {
+      color: #fff;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: toRem(20);
+    width: 100%;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__button {
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  &__slider {
+    position: relative;
+
+    @media (max-width: $mobile) {
+      margin: 0 toRem(-15);
+    }
+  }
+
+  &__wrapper {
+  }
+
+  &__slide-ibg--contain {
+    overflow: hidden;
+    padding-bottom: percent(562, 1180);
+
+    @media (min-width: $mobile) {
+      border-radius: toRem(20);
+    }
+  }
+
+  &__pagination {
+    @media (min-width: $mobile) {
+      position: absolute;
+      bottom: toRem(38);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+    }
+    @media (max-width: $mobile) {
+      margin-top: toRem(15);
+
+      .swiper-pagination-bullet {
+        background-color: rgba(104, 104, 104, 0.23);
+      }
+      .swiper-pagination-bullet-active {
+        background-color: #686868;
+      }
+    }
+  }
+
+  &__items {
+    margin-top: toRem(20);
+    display: grid;
+    gap: toRem(20);
+    grid-template-columns: repeat(auto-fill, minmax(toRem(300), 1fr));
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(15);
+
+    border-radius: toRem(15);
+    background: #fff;
+
+    padding: toRem(34) toRem(35);
+  }
+
+  &__item-ico {
+    flex-grow: 0;
+    flex-shrink: 0;
+    @include adaptiveValue("flex-basis", 80, 65);
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__item-text {
+    color: #333;
+    line-height: 100%;
+  }
+}
+
 //====================================================================================================
