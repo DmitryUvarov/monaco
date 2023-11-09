@@ -10,6 +10,20 @@
   text-transform: uppercase;
 }
 
+.text {
+  color: #686868;
+  font-family: Jost;
+  @include adaptiveValue("font-size", 20, 18);
+  font-weight: 400;
+  line-height: 110%; /* 22/20 */
+
+  p {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 20, 15);
+    }
+  }
+}
+
 //========================================================================================================================================================
 
 .pagination {
@@ -63,6 +77,24 @@
       width: percent(224, 1920);
       bottom: percent(103, 980);
       left: percent(-53, 1920);
+    }
+
+    &_3 {
+      width: percent(163, 1920);
+      top: percent(160, 2800);
+      left: percent(-40, 1920);
+    }
+
+    &_4 {
+      width: percent(254, 1920);
+      top: percent(850, 2800);
+      right: percent(-104, 1920);
+    }
+
+    &_5 {
+      width: percent(275, 1920);
+      bottom: percent(486, 2800);
+      left: percent(-106, 1920);
     }
 
     img {
