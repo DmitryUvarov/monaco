@@ -238,3 +238,51 @@
 }
 
 //========================================================================================================================================================
+
+.price {
+  position: relative;
+  @include adaptiveValue("padding-top", 85, 35);
+  @include adaptiveValue("padding-bottom", 85, 35);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background-color: #fff;
+  }
+  &__container {
+  }
+
+  &__body {
+    display: grid;
+
+    gap: toRem(20);
+
+    @media (min-width: em(660)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__image-ibg--contain {
+    overflow: hidden;
+    border-radius: toRem(20);
+    padding-bottom: percent(986, 580);
+  }
+
+  &__decor-item {
+    width: percent(268, 1920);
+    bottom: percent(225, 980);
+    right: percent(-63, 1920);
+    left: auto;
+
+    @media (max-width: em(660)) {
+      display: none;
+    }
+  }
+}
+
+//========================================================================================================================================================
