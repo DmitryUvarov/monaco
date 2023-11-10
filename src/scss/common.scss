@@ -97,6 +97,24 @@
       left: percent(-106, 1920);
     }
 
+    &_6 {
+      width: percent(310, 1920);
+      top: percent(235, 981);
+      left: percent(-107, 1920);
+    }
+
+    &_7 {
+      width: percent(271, 1920);
+      bottom: percent(158, 1560);
+      right: percent(-90, 1920);
+    }
+
+    &_8 {
+      width: percent(317, 1920);
+      bottom: percent(-135, 733);
+      left: percent(-161, 1920);
+    }
+
     img {
       max-width: 100%;
     }
@@ -104,6 +122,69 @@
     @media (max-width: $mobile) {
       width: 20%;
       opacity: 0.7;
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.play {
+  &::before {
+    content: "\e908";
+    @extend %ic;
+    display: block;
+    @include adaptiveValue("width", 72, 50);
+    @include adaptiveValue("height", 72, 50);
+    border-radius: 50%;
+    background-color: #f2b154;
+    z-index: 2;
+    color: #ffffff;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("font-size", 27, 20);
+
+    animation: pulse-btn 2s infinite;
+  }
+}
+
+.loupe {
+  &::before {
+    content: "\e905";
+    @extend %ic;
+    display: block;
+    @include adaptiveValue("width", 72, 50);
+    @include adaptiveValue("height", 72, 50);
+    border-radius: 50%;
+    background-color: #f2b154;
+    z-index: 2;
+    color: #ffffff;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("font-size", 27, 20);
+
+    animation: pulse-btn 2s infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease 0s;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
     }
   }
 }

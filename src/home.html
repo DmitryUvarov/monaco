@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/_head.htm',{
-"title":"HomePage"
+"title":"Главная"
 })
 
 <body>
@@ -14,7 +14,7 @@
 					<div class="hero__body">
 						<h1 class="hero__title title">ОАЗИС РАЗВЛЕЧЕНИЙ ПОД ЗАКРЫТЫМ НЕБОМ</h1>
 						<div class="hero__buttons">
-							<button class="hero__button button">Забронировать</button>
+							<button class="hero__button button" data-popup="#popup">Забронировать</button>
 							<button class="hero__button button button_blue">Наши контакты</button>
 						</div>
 					</div>
@@ -180,33 +180,105 @@
 				</div>
 			</section>
 
-			<section class="photo">
+			<section class="photo" data-prlx-parent>
 				<div class="photo__container">
 					<h2 class="photo__title title">Фотогалерея</h2>
 					<p class="photo__subtitle">Собирай друзей и отравляйся к нам!</p>
 					<div class="photo__items">
 						<!-- <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=RzVvThhjAKw" class="photo__item-ibg"><img src="@img/photo/01.jpg" alt=""></a> -->
-						<a data-fancybox="gallery" href="@img/photo/01.jpg" class="photo__item-ibg"><img src="@img/photo/01.jpg" alt=""></a>
-						<a data-fancybox="gallery" href="@img/photo/02.jpg" class="photo__item-ibg"><img src="@img/photo/02.jpg" alt=""></a>
-						<a data-fancybox="gallery" href="@img/photo/03.jpg" class="photo__item-ibg"><img src="@img/photo/03.jpg" alt=""></a>
-						<a data-fancybox="gallery" href="@img/photo/04.jpg" class="photo__item-ibg"><img src="@img/photo/04.jpg" alt=""></a>
-						<a data-fancybox="gallery" href="@img/photo/05.jpg" class="photo__item-ibg"><img src="@img/photo/05.jpg" alt=""></a>
-						<a data-fancybox="gallery" href="@img/photo/06.jpg" class="photo__item-ibg"><img src="@img/photo/06.jpg" alt=""></a>
+						<a data-fancybox="gallery" href="@img/photo/01.jpg" class="photo__item-ibg loupe"><img src="@img/photo/01.jpg" alt=""></a>
+						<a data-fancybox="gallery" href="@img/photo/02.jpg" class="photo__item-ibg loupe"><img src="@img/photo/02.jpg" alt=""></a>
+						<a data-fancybox="gallery" href="@img/photo/03.jpg" class="photo__item-ibg loupe"><img src="@img/photo/03.jpg" alt=""></a>
+						<a data-fancybox="gallery" href="@img/photo/04.jpg" class="photo__item-ibg loupe"><img src="@img/photo/04.jpg" alt=""></a>
+						<a data-fancybox="gallery" href="@img/photo/05.jpg" class="photo__item-ibg loupe"><img src="@img/photo/05.jpg" alt=""></a>
+						<a data-fancybox="gallery" href="@img/photo/06.jpg" class="photo__item-ibg loupe"><img src="@img/photo/06.jpg" alt=""></a>
 					</div>
 					<a href="#" class="photo__link button button_arrow">Посмотреть все</a>
 				</div>
+				<div class="photo__decor decor">
+					<div class="decor__item decor__item_6" data-prlx><img src="@img/decor/06.svg" alt=""></div>
+				</div>
 			</section>
 
-			<!-- <section class="test">
-				<div class="test__container">
-					<div class="test__body">
+			<section class="instagram" data-prlx-parent>
+				<div class="instagram__container">
+					<div class="instagram__top">
+						<h2 class="instagram__title title">МЫ В ИНСТАГРАМЕ</h2>
+						<a href="#" target="_blank" class="instagram__link _icon-instagram">monaco.aquapark</a>
+					</div>
+					<div class="instagram__items">
+						<a data-fancybox="instagram" href="@img/instagram/01.jpg" class="instagram__item-ibg"><img src="@img/instagram/01.jpg" alt=""></a>
+						<a data-fancybox="instagram" href="@img/instagram/02.jpg" class="instagram__item-ibg"><img src="@img/instagram/02.jpg" alt=""></a>
+						<a data-fancybox="instagram" href="@img/instagram/01.jpg" class="instagram__item-ibg"><img src="@img/instagram/01.jpg" alt=""></a>
+						<a data-fancybox="instagram" href="@img/instagram/01.jpg" class="instagram__item-ibg"><img src="@img/instagram/01.jpg" alt=""></a>
+						<a data-fancybox="instagram" href="@img/instagram/02.jpg" class="instagram__item-ibg"><img src="@img/instagram/02.jpg" alt=""></a>
+						<a data-fancybox="instagram" href="@img/instagram/01.jpg" class="instagram__item-ibg"><img src="@img/instagram/01.jpg" alt=""></a>
+						<a data-fancybox="instagram" href="@img/instagram/01.jpg" class="instagram__item-ibg"><img src="@img/instagram/01.jpg" alt=""></a>
+						<a data-fancybox="instagram" href="@img/instagram/02.jpg" class="instagram__item-ibg"><img src="@img/instagram/02.jpg" alt=""></a>
+						<a data-fancybox="instagram" href="@img/instagram/01.jpg" class="instagram__item-ibg"><img src="@img/instagram/01.jpg" alt=""></a>
+					</div>
 
+					<div class="instagram__buttons">
+						<a href="#" class="instagram__button button">Показать ещё</a>
+						<a href="#" target="_blank" class="instagram__button button button_blue">Перейти в инстаграм</a>
 					</div>
 				</div>
-			</section> -->
+				<div class="contact__decor decor">
+					<div class="decor__item decor__item_7" data-prlx><img src="@img/decor/07.svg" alt=""></div>
+				</div>
+			</section>
+
+			<section class="contact" data-prlx-parent>
+				<div class="contact__container">
+					<h2 class="contact__title title">КОНТАКТЫ</h2>
+					<div class="contact__body">
+						<div class="contact__map"><img src="@img/contact/map.jpg" alt=""></div>
+						<div class="contact__contact-block contact-block">
+							<div class="contact-block__line _icon-phone">
+								<div class="contact-block__body">
+									<div class="contact-block__text">Контактный номер:</div>
+									<a href="tel:+998952151515" class="contact-block__link">+998 95 215 15 15</a>
+								</div>
+							</div>
+							<div class="contact-block__line _icon-mail">
+								<div class="contact-block__body">
+									<div class="contact-block__text">Электронная почта</div>
+									<a href="mailto:monacoaquapark@gmail.com" class="contact-block__link">monacoaquapark@gmail.com</a>
+								</div>
+							</div>
+							<div class="contact-block__line _icon-location">
+								<div class="contact-block__body">
+									<div class="contact-block__text">Адрес офиса</div>
+									<div class="contact-block__link">Карасу, 4-массив</div>
+								</div>
+							</div>
+							<div class="contact-block__social social">
+								<a href="#" class="social__link _icon-facebook"></a>
+								<a href="#" class="social__link _icon-telegram"></a>
+								<a href="#" class="social__link _icon-instagram"></a>
+							</div>
+						</div>
+					</div>
+					<div class="contact__decor decor">
+						<div class="decor__item decor__item_8" data-prlx><img src="@img/decor/08.svg" alt=""></div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="questions">
+				<div class="questions__container">
+					<div class="questions__body">
+						<h2 class="questions__title title">У ВАС ОСТАЛИСЬ ВОПРОСЫ?</h2>
+						<div class="questions__button button">Связаться</div>
+						<div class="questions__bg-ibg"><img src="@img/questions/bg.jpg" alt=""></div>
+					</div>
+				</div>
+			</section>
 
 		</main>
 		@@include('html/_footer.htm',{})
+		@@include('html/_popup.htm',{})
 	</div>
 	@@include('html/_js.htm',{})
 </body>

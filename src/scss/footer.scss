@@ -1,3 +1,83 @@
 //====================================================================================================
 
+.footer {
+  @include adaptiveValue("padding-top", 40, 35);
+  @include adaptiveValue("padding-bottom", 58, 40);
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: -2;
+  }
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    @include adaptiveValue("gap", 165, 30, 0, 1210, 991);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    display: block;
+    max-width: 118px;
+    transition: all 0.3s ease 0s;
+
+    img {
+      max-width: 100%;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    @include adaptiveValue("gap", 45, 20, 0, 1210, 991);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__list {
+  }
+
+  &__item {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 40, 20, 0, 1210, 767);
+    }
+  }
+
+  &__link {
+    color: #333;
+    font-size: toRem(19);
+    line-height: 100%; /* 100% */
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #f2b154;
+      }
+    }
+  }
+
+  &__contact-block {
+    @media (min-width: $mobile) {
+      margin-left: auto;
+    }
+  }
+}
+
 //====================================================================================================
