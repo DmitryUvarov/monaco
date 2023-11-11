@@ -2,13 +2,11 @@
 
 .hero {
   position: relative;
-  @include adaptiveValue("padding-top", 30, 70, 0, 1210, 767);
+
   @include adaptiveValue("padding-bottom", 85, 40);
-  @media (min-width: $pc) {
-    // padding-top: toRem(137);
-  }
+
   @media (min-width: $mobile) {
-    // padding-top: toRem(165);
+    @include adaptiveValue("padding-top", 30, 70, 0, 1210, 767);
   }
 
   @media (max-width: $mobile) {
@@ -338,7 +336,11 @@
 
   &__text {
     margin-top: toRem(10);
-    padding-left: toRem(80);
+    padding-left: toRem(95);
+
+    @media (max-width: $mobile) {
+      padding-left: toRem(80);
+    }
   }
 }
 
