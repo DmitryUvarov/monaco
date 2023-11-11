@@ -23,6 +23,7 @@
 
     @media (max-width: $mobile) {
       flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -58,6 +59,10 @@
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 40, 20, 0, 1210, 767);
     }
+
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
   }
 
   &__link {
@@ -76,6 +81,11 @@
   &__contact-block {
     @media (min-width: $mobile) {
       margin-left: auto;
+    }
+    @media (max-width: $mobile) {
+      .contact-block__social {
+        justify-content: center;
+      }
     }
   }
 }
